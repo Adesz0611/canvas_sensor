@@ -49,6 +49,16 @@ class Player {
 
         this.x += this.vx;
         this.y += this.vy;
+
+        this.checkCollision();
+    }
+
+    checkCollision() {
+        if(this.x < 0) { this.x = 0; }
+        if(this.y < 0) { this.y = 0; }
+
+        if(this.x + this.w > Game.canvas.width)  { this.x = Game.canvas.width - this.w; }
+        if(this.y + this.h > Game.canvas.height) { this.y = Game.canvas.height - this.h; }
     }
 }
 

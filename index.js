@@ -17,7 +17,7 @@ function keyUpHandler(e) {
 }
 
 
-let player = new Player(10, 10, 50, 50, 2);
+let player = new Player(10, 10, 50, 50, 4);
 
 function draw() {
     ctx.clearRect(0, 0, c.width, c.height);
@@ -26,12 +26,7 @@ function draw() {
     player.draw(ctx);
 
 
-
     requestAnimationFrame(draw);
-    //player.x++;
 }
 
 draw();
-//setInterval(draw, 16);
-
-
