@@ -1,3 +1,5 @@
+import Game from "./Game.js";
+
 class Player {
     constructor(x, y, w, h, speed = 1) {
         this.x = x;
@@ -26,6 +28,25 @@ class Player {
     }
 
     update() {
+        this.vx = 0;
+        this.vy = 0;
+
+        if(Game.keys[Game.Key.Left]) {
+            this.vx = -this.speed;
+        }
+    
+        if(Game.keys[Game.Key.Right]) {
+            this.vx = this.speed;
+        }
+    
+        if(Game.keys[Game.Key.Up]) {
+            this.vy = -this.speed;
+        }
+    
+        if(Game.keys[Game.Key.Down]) {
+            this.vy = this.speed;
+        }
+
         this.x += this.vx;
         this.y += this.vy;
     }
