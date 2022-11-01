@@ -1,7 +1,7 @@
 import Player from "./Player.js";
 import Game from "./Game.js";
 
-let player = new Player(10, 10, 50, 50, 4);
+let player = new Player(25, 750, 35, 35, 4);
 
 document.getElementById("speed").oninput = function () {
     const speed = Number(document.getElementById("speed").value);

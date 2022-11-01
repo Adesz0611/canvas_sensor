@@ -3,7 +3,7 @@ body {
 }
 
 #myCanvas {
-    border: 3px solid #000;
+    /*border: 3px solid #000;*/
     margin: auto;
     display: block;
     background-color: greenyellow;
