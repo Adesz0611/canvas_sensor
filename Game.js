@@ -26,6 +26,33 @@ let Game = {
 
         new Wall(430, 598, 3, 120),
         new Wall(495, 598, 3, 120),
+
+        //délkeleti szoba
+        new Wall(495, 413, 3, 120),
+        new Wall(495, 410, 245, 3),
+
+        //délnyugati szoba
+        new Wall(430, 413, 3, 120),
+        new Wall(13, 410, 420, 3),
+
+        //wc
+        new Wall(495, 295, 3, 50),
+        new Wall(495, 292, 245, 3),
+
+        // gyerekszoba1
+        new Wall(430, 160, 3, 250),
+        new Wall(10, 160, 65, 3),
+        new Wall(140, 160, 70, 3),
+
+        // gyerekszoba2
+        new Wall(210, 160, 3, 250),
+        new Wall(213, 160, 70, 3),
+        new Wall(348, 160, 82, 3),
+
+        new Wall(430, 13, 3, 17),
+        new Wall(10, 92, 420, 3),
+
+        new Wall(495, 13, 3, 214),
     ],
 };
 
