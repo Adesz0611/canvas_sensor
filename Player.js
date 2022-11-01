@@ -60,6 +60,13 @@ class Player {
         if(this.x + this.w > Game.canvas.width)  { this.x = Game.canvas.width - this.w; }
         if(this.y + this.h > Game.canvas.height) { this.y = Game.canvas.height - this.h; }
     }
+
+    checkWallCollision(wall) {
+        return (this.x < wall.x + wall.w &&
+                this.x + this.w > wall.x &&
+                this.y < wall.y + wall.h &&
+                this.h + this.y > wall.y);
+    }
 }
 
 export default Player;

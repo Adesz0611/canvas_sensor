@@ -1,3 +1,5 @@
+import Wall from "./Wall.js";
+
 let Game = {
     keys: [],
     Key: {
@@ -7,6 +9,10 @@ let Game = {
         Down: 83,
     },
     canvas: document.getElementById("myCanvas"),
+    walls: [
+        new Wall(50, 100, 100, 3),
+        //new Wall(200, 500, 3, 130),
+    ],
 };
 
 export default Game;
