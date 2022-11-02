@@ -1,5 +1,5 @@
 import Wall from "./Wall.js";
-import {SoundSensor} from "./Sensors.js";
+import {SoundSensor, PassageSensor} from "./Sensors.js";
 
 let Game = {
     keys: [],
@@ -13,6 +13,9 @@ let Game = {
     sound_sensors: [
         new SoundSensor(620, 550, 200),
         new SoundSensor(320, 300, 100),
+    ],
+    passage_sensors: [
+        new PassageSensor(100, 100, 100, 30),
     ],
     walls: [
         // Északi fal

@@ -50,4 +50,31 @@ class SoundSensor {
     }
 };
 
-export {SoundSensor};
+class PassageSensor {
+    constructor(x, y, w, h) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+    }
+
+    draw(ctx, player) {
+        ctx.beginPath();
+        ctx.rect(this.x, this.y, this.w, this.h);
+        ctx.fillStyle = "rgba(255,105,180, 0.3)";
+        if (this.AABB(player)) {
+            ctx.fillStyle = "rgba(255,105,180, 1)";
+        }
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    AABB(player) {
+        return (this.x < player.x + player.w &&
+                this.x + this.w > player.x &&
+                this.y < player.y + player.h &&
+                this.h + this.y > player.y);
+    }
+}
+
+export {SoundSensor, PassageSensor};

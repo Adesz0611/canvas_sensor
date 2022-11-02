@@ -53,8 +53,14 @@ function draw() {
 
     Game.sound_sensors.forEach(sensor => {
         sensor.draw(ctx, player);
+    });
+
+    Game.passage_sensors.forEach(sensor => {
+        sensor.draw(ctx, player);
     })
     
+
+
     Game.walls.forEach(wall => {
         wall.draw(ctx);
         while(player.checkWallCollision(wall)) {
