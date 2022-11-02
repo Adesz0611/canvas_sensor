@@ -3,7 +3,6 @@ import Game from "./Game.js";
 import SoundSensor from "./Sensors.js";
 
 let player = new Player(25, 750, 35, 35, 4);
-//let sensor = new SoundSensor(200, 100, 100);
 
 document.getElementById("speed").oninput = function () {
     const speed = Number(document.getElementById("speed").value);
@@ -60,9 +59,13 @@ function draw() {
             player.y -= getYDirection();
         }
     });
-    player.draw(ctx);
-    //sensor.draw(ctx);
+    Game.sound_sensors.forEach(sensor => {
+        sensor.draw(ctx, player);
+    })
     
+    player.draw(ctx);
+
+     
 
 
     requestAnimationFrame(draw);

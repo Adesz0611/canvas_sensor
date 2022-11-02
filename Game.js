@@ -1,4 +1,5 @@
 import Wall from "./Wall.js";
+import SoundSensor from "./Sensors.js";
 
 let Game = {
     keys: [],
@@ -9,6 +10,10 @@ let Game = {
         Down: 83,
     },
     canvas: document.getElementById("myCanvas"),
+    sound_sensors: [
+        new SoundSensor(620, 550, 200),
+        new SoundSensor(320, 300, 100),
+    ],
     walls: [
         // Északi fal
         new Wall(10, 10, 730, 3),
