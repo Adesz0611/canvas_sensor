@@ -1,6 +1,5 @@
 import Player from "./Player.js";
 import Game from "./Game.js";
-import SoundSensor from "./Sensors.js";
 
 let player = new Player(25, 750, 35, 35, 4);
 
@@ -52,6 +51,10 @@ function draw() {
 
     player.update();
 
+    Game.sound_sensors.forEach(sensor => {
+        sensor.draw(ctx, player);
+    })
+    
     Game.walls.forEach(wall => {
         wall.draw(ctx);
         while(player.checkWallCollision(wall)) {
@@ -59,10 +62,7 @@ function draw() {
             player.y -= getYDirection();
         }
     });
-    Game.sound_sensors.forEach(sensor => {
-        sensor.draw(ctx, player);
-    })
-    
+
     player.draw(ctx);
 
      

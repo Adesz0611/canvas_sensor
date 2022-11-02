@@ -50,4 +50,4 @@ class SoundSensor {
     }
 };
 
-export default SoundSensor;
+export {SoundSensor};

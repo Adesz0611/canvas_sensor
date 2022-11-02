@@ -1,5 +1,5 @@
 import Wall from "./Wall.js";
-import SoundSensor from "./Sensors.js";
+import {SoundSensor} from "./Sensors.js";
 
 let Game = {
     keys: [],
